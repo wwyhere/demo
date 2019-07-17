@@ -73,11 +73,11 @@ fatal： 级别比较高了。重大错误，这种级别你可以直接停止�
 
 
         <!--记录druid-sql的记录-->
-        <logger name="druid.sql.Statement" level="debug" additivity="false">
+        <!--<logger name="druid.sql.Statement" level="debug" additivity="false">
             <appender-ref ref="ConsoleLog"/>
         </logger>
         <logger name="org" level="warn">
-        </logger>
+        </logger>-->
 
         <!--log4j2 自带过滤日志-->
         <Logger name="org.apache.catalina.startup.DigesterFactory" level="error" />

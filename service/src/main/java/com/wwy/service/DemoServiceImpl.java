@@ -2,10 +2,8 @@ package com.wwy.service;
 
 import com.wwy.api.DemoService;
 import org.apache.dubbo.config.annotation.Service;
-import org.springframework.stereotype.Component;
 
-@Service(interfaceClass = DemoService.class)
-@Component
+@Service
 public class DemoServiceImpl implements DemoService {
 
     @Override
