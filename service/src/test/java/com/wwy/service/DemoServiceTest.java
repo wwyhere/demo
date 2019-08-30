@@ -46,9 +46,17 @@ public class DemoServiceTest extends BaseServiceTest {
         client.start();
         InterProcessMutex interProcessMutex = new InterProcessMutex(client, "/lock/adlock");
         try {
-            interProcessMutex.acquire(3000, TimeUnit.SECONDS);
+            while (interProcessMutex.acquire(3000, TimeUnit.MILLISECONDS)){
+                //todo something
+            }
+            interProcessMutex.release();
         } catch (Exception e) {
             e.printStackTrace();
+            try {
+                interProcessMutex.release();
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
         }
     }
 
