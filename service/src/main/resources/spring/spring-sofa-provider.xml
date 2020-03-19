@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sofa="http://sofastack.io/schema/sofaboot" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://sofastack.io/schema/sofaboot http://sofastack.io/schema/sofaboot.xsd" default-autowire="byName" >
+    <bean id="demoServiceImpl" class="com.wwy.service.DemoServiceImpl"/>
+    <sofa:service ref="demoServiceImpl" interface="com.wwy.api.DemoService">
+        <sofa:binding.bolt>
+            <sofa:global-attrs timeout="3000"/>  <!-- 调用超时；地址等待时间。 -->
+            <sofa:method name="sayName" timeout="3000"/> <!-- 方法级别配置 -->
+        </sofa:binding.bolt>
+        <!--<sofa:binding.rest/>-->
+        <sofa:binding.dubbo/>
+    </sofa:service>
+</beans>

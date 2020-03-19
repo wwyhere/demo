@@ -1,10 +1,10 @@
 package com.wwy.service;
 
+import com.alipay.sofa.runtime.api.annotation.SofaService;
 import com.wwy.api.DemoService;
 import com.wwy.entity.DemoModel;
-import org.apache.dubbo.config.annotation.Service;
 
-@Service
+//@SofaService(uniqueId = "demoServiceImpl")
 public class DemoServiceImpl implements DemoService {
 
     @Override
@@ -15,7 +15,7 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public String modelHello(DemoModel demoModel) {
-        System.out.println(demoModel.getName()+":"+demoModel.getAge());
-        return "Hello " + demoModel.getName()+":"+demoModel.getAge();
+        System.out.println(demoModel.getName() + ":" + demoModel.getAge());
+        return "Hello " + demoModel.getName() + ":" + demoModel.getAge();
     }
 }
