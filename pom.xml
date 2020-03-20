@@ -17,6 +17,7 @@
     <artifactId>demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -30,6 +31,9 @@
         <rhino-version>1.7.12</rhino-version>
         <jsoup-version>1.13.1</jsoup-version>
         <validation-api-version>2.0.1.Final</validation-api-version>
+        <jedis-version>2.9.3</jedis-version>
+        <guava-version>28.2-jre</guava-version>
+        <fastjson-version>1.2.66</fastjson-version>
     </properties>
 
     <modules>
@@ -65,7 +69,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.66</version>
+            <version>${fastjson-version}</version>
         </dependency>
     </dependencies>
 
