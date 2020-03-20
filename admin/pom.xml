@@ -82,10 +82,11 @@
                             <exclude>*.xml</exclude>
                             <exclude>*.properties</exclude>
                             <exclude>*.yml</exclude>
+                            <exclude>META-INFO/spring/*.xml</exclude>
                         </excludes>
                     </resource>
                     <resource>
-                        <directory>src/main/resources/env/${env}</directory>
+                        <directory>src/main/resources</directory>
                         <targetPath>${project.build.outputDirectory}</targetPath>
                         <includes>
                             <include>**/*</include>
