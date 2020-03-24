@@ -6,17 +6,14 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 @SpringBootApplication
-@ImportResource(locations = {"classpath*:META-INF/spring/*.xml"})
+@EnableRedisHttpSession
 public class AdminApplication {
 
     public static void main(String[] args) {
-//        SpringApplication.run(AdminApplication.class, args);
-
-        new SpringApplicationBuilder(AdminApplication.class)
-                .web(WebApplicationType.SERVLET) // NONE为非web工程，一般用于专门提供接口的jar
-                .run(args);
+        SpringApplication.run(AdminApplication.class, args);
     }
 
 }

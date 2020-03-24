@@ -31,9 +31,10 @@
         <rhino-version>1.7.12</rhino-version>
         <jsoup-version>1.13.1</jsoup-version>
         <validation-api-version>2.0.1.Final</validation-api-version>
-        <jedis-version>2.9.3</jedis-version>
+        <jedis-version>2.10.2</jedis-version>
         <guava-version>28.2-jre</guava-version>
         <fastjson-version>1.2.66</fastjson-version>
+        <spring-session-data-redis-version>2.2.2.RELEASE</spring-session-data-redis-version>
     </properties>
 
     <modules>
