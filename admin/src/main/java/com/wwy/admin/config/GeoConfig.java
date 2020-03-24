@@ -23,10 +23,6 @@ import org.springframework.context.annotation.Configuration;
 
 import java.io.InputStream;
 
-/**
- * @author Rob Winch
- *
- */
 @Configuration
 public class GeoConfig {
 
