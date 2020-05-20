@@ -7,4 +7,8 @@ public interface DemoService {
     String sayHello(String name);
 
     String modelHello(DemoModel demoModel);
+
+    default void testDefaultMethod(){
+        sayHello("aaa");
+    }
 }

@@ -21,7 +21,12 @@ public class DemoServiceTest extends BaseServiceTest {
 
     @Test
     public void testRedisTemplate() {
+        long l = System.currentTimeMillis();
         redisTemplate.opsForValue().set("a", 1);
-        System.out.println(111);
+        long l2 = System.currentTimeMillis();
+        System.out.println("写入耗时:"+(l2-l));
+        Object a = redisTemplate.opsForValue().get("a");
+        long l3 = System.currentTimeMillis();
+        System.out.println("读取耗时:"+(l3-l2));
     }
 }
